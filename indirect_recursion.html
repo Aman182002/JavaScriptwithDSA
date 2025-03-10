@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indirect recursion</title>
+    <script>
+        let money=100;
+        let apple=0;
+        let totalApple=0;
+
+        function buyApple(x){
+              if(x>0){
+                console.warn("i have ",x,"RS",totalApple)
+                buyMore(x);
+              }else{
+                 console.warn("I don't have more money", totalApple);          
+                 }
+            
+        }
+        function buyMore(x){
+            totalApple++;
+            buyApple(x-10);
+          
+        }
+
+
+        buyApple(money);
+    </script>
+</head>
+<body>
+    <h1>Indirect Recursion</h1>
+</body>
+</html>
