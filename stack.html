@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack with JavaScript</title>
+    <script>
+        let data = [];   //blank array means it is a stack  
+        let currentSize=data.length;
+        let max=5;
+        function push(newVal){
+            if(currentSize>=max){
+                alert("Stack is full you can not add"+newVal)//alert mai comma dalkr valuenhi de skte
+            }
+
+            data[currentSize]=newVal;
+            currentSize+=1
+        }
+        
+        function pop(){
+            if(currentSize>0){
+                currentSize-=1;
+                data.length=currentSize;
+            }else{
+                alert("Stack is already empty")
+            }
+        }
+
+        
+        push(20);
+        push(30);
+        push(40);
+        push(50);
+        push(60);
+        pop();
+        pop();
+        push(85);
+        push(63);
+        // pop();
+        // pop();
+        // pop();
+        // pop();
+        // push(70);
+        // push(80);
+        console.warn(data);
+    </script>
+</head>
+<body>
+    <h1>Stack with JavaScript</h1>
+    
+</body>
+</html>
